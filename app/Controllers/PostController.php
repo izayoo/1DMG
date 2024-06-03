@@ -35,11 +35,6 @@ class PostController extends BaseController
         return $this->respond($response);
     }
 
-//    public function paginate(): ResponseInterface
-//    {
-//        reutnr $this->model->paginate();
-//    }
-
     /**
      * @return ResponseInterface
      */
@@ -74,7 +69,11 @@ class PostController extends BaseController
      */
     public function show(int $id): ResponseInterface
     {
-        return $this->respond($this->model->find($id));
+        $post = $this->model->find($id);
+
+        if(is_null($post)) return $this->failNotFound('Resource not found');
+
+        return $this->respond($post);
     }
 
     /**

@@ -15,6 +15,7 @@
     * database.default.DBDriver = MySQLi
     * database.default.DBPrefix =
     * database.default.port = 3306
+    * JWT_SECRET = {your JWT secret key}
   * Run `php spark migrate` to run migrations
 
-
+> _** You may run `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` in your terminal to create a random JWT secret key_
