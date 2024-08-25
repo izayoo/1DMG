@@ -1,4 +1,4 @@
-# 1DMG Assessment | Restful API
+# Code Igniter | Restful API Boilerplate
 
 ## Installation
 
